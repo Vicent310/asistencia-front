@@ -93,7 +93,7 @@
 
     function eliminarUsuario(matricula) {
   if (confirm(`¿Estás seguro de eliminar al usuario con matrícula ${matricula}?`)) {
-    fetch("/eliminar-usuario", {
+    fetch("https://asistencia-backend-pcc4.onrender.com/eliminar-usuario", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ matricula })
@@ -111,7 +111,7 @@
 }
 
     async function cargarUsuarios() {
-      const res = await fetch("/usuarios");
+      const res = await fetch("https://asistencia-backend-pcc4.onrender.com/usuarios");
       const data = await res.json();
       const tbody = document.getElementById("tabla-usuarios");
       tbody.innerHTML = "";
@@ -146,13 +146,11 @@
         ciclo_escolar: document.getElementById("edit-ciclo").value,
         tipo: document.getElementById("edit-tipo").value,
       };
-
-      const res = await fetch("/actualizar-usuario", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datos)
-      });
-
+      const res = await fetch("https://asistencia-backend-pcc4.onrender.com/actualizar-usuario", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(datos)
+});
       const result = await res.json();
       alert(result.mensaje);
       if (result.success) {

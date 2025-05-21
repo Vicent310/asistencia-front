@@ -32,7 +32,7 @@
       const usuario = document.getElementById("usuario").value;
       const password = document.getElementById("password").value;
 
-      fetch("/login", {
+      fetch('https://asistencia-backend-pcc4.onrender.com/login', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ usuario, password })

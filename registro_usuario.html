@@ -53,7 +53,7 @@
         foto: document.getElementById("foto").value.trim()
       };
   
-      const res = await fetch("/registrar-usuario", {
+      const res = await fetch('https://asistencia-backend-pcc4.onrender.com/registrar-usuario', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos)

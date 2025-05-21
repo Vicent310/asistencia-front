@@ -30,11 +30,12 @@
       const usuario = document.getElementById("usuario").value.trim();
       const contrasena = document.getElementById("contrasena").value.trim();
 
-      const res = await fetch("/login-docente", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ usuario, password: contrasena })
-      });
+      const res = await fetch("https://asistencia-backend-pcc4.onrender.com/login-docente", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ usuario, password: contrasena })
+});
+
 
       const data = await res.json();
       if (data.success) {

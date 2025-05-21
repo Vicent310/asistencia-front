@@ -165,8 +165,7 @@
         row.style.display = row.innerText.toLowerCase().includes(valor) ? "" : "none";
       });
     });
-
-    cargarUsuarios();
+    window.onload = cargarUsuarios;
   </script>
 </body>
 </html>

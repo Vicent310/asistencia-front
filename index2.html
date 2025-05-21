@@ -71,24 +71,27 @@
       const matricula = document.getElementById("matricula").value.trim();
       if (!matricula) return;
 
-      const res = await fetch("https://asistencia-backend-pcc4.onrender.com/registrar", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ matricula })
-      });
+      try {
+  const res = await fetch("https://asistencia-backend-pcc4.onrender.com/registrar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ matricula })
+  });
 
-      const data = await res.json();
-      const url = new URL("confirmacion.html", window.location.origin);
-      url.searchParams.set("nombre", data.nombre || "");
-      url.searchParams.set("tipo", data.tipo || "");
-      url.searchParams.set("foto", data.foto || "");
-      url.searchParams.set("registro", data.tipo || "fallido");
-      url.searchParams.set("hora", data.hora || new Date().toLocaleTimeString());
-      window.location.href = url.toString();
+  const data = await res.json();
 
-      form.reset();
-    });
+  const url = new URL("confirmacion.html", window.location.origin);
+  url.searchParams.set("nombre", data.nombre || "");
+  url.searchParams.set("tipo", data.tipo || "");
+  url.searchParams.set("foto", data.foto || "");
+  url.searchParams.set("registro", data.tipo || "fallido");
+  url.searchParams.set("hora", data.hora || new Date().toLocaleTimeString());
+  window.location.href = url.toString();
 
+} catch (err) {
+  alert("❌ Error al conectar con el servidor. Intenta más tarde.");
+  console.error("Error en el registro:", err);
+}
     // 🖨️ Registro automático al escanear con lector (Enter)
     document.getElementById("matricula").addEventListener("keydown", function (e) {
       if (e.key === "Enter") {

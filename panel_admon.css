@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+  }
+  
+  .encabezado {
+    background-color: #0033A0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 10px;
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 140px;
+  }
+  
+  .menu {
+    background-color: white;
+    border-bottom: 3px solid #D52B1E;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .menu a {
+    color: #0033A0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #0033A0;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: #0033A0;
+    color: white;
+  }
+  
+  .cerrar-sesion {
+    border-color: #D52B1E;
+    color: #D52B1E;
+  }
+  
+  .cerrar-sesion:hover {
+    background-color: #D52B1E;
+    color: white;
+  }
+  
+  .contenido {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .pie {
+    background-color: #D52B1E;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  /* Estilo general del encabezado */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #0033A0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Logo alineado a la izquierda */
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Título centrado */
+.titulo {
+  flex: 1;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Menú de botones */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+/* Responsivo para pantallas muy grandes */
+@media screen and (min-width: 1400px) {
+  .encabezado {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

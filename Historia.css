@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 110;
+  background: #f2f2f2;
+  text-align: justify;
+  line-height: 1.5;
+  color: #222;
+}
+
+.encabezado {
+  background: linear-gradient(to right, #0047AB, #d32f2f);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.encabezado .logo {
+  height: 100px;
+}
+
+.encabezado nav a {
+  color: white;
+  margin: 0 100px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contenido {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.seccion {
+  margin-bottom: 40px;
+}
+
+.titulo-rojo {
+  color: #d32f2f;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 5px;
+  font-size: 1.8em;
+}
+
+.titulo-azul {
+  color: #0047AB;
+  border-bottom: 2px solid #0047AB;
+  padding-bottom: 5px;
+  font-size: 1.8em;
+}
+
+.himno {
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #0047AB;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+.pie {
+  text-align: center;
+  padding: 15px;
+  background: #0047AB;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 30px;
+  border-top: 4px solid #d32f2f;
+}
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #063970, #c42026);
+  color: white;
+}
+
+.logo-izquierda {
+  flex: 1;
+  margin-top: 1px;
+}
+
+.titulo-centro {
+  flex: 4;
+  text-align: center;
+}
+
+.inicio-derecha {
+  margin-right: 100px;
+}
+
+.logo {
+  height: 80px;
+}
+
+.btn-inicio {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.btn-inicio:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .background-split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #005aa7 50%, #d32f2f 50%);
+  }
+  
+  .login-card {
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .icon-container {
+    margin: -80px auto 20px;
+  }
+  
+  .icon-container img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .indicacion {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: 2px solid #005aa7;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 15px 40px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .volver {
+    background-color: white;
+    color: #005aa7;
+    border: 2px solid #005aa7;
+  }
+  
+  .volver:hover {
+    background-color: #e6f0fa;
+  }
+  
+  .ingresar {
+    background-color: #d32f2f;
+    color: white;
+    border: 2px solid transparent;
+  }
+  
+  .ingresar:hover {
+    background-color: #b71c1c;
+  }
+  

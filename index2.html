@@ -71,7 +71,7 @@
       const matricula = document.getElementById("matricula").value.trim();
       if (!matricula) return;
 
-      const res = await fetch("/registrar", {
+      const res = await fetch("https://asistencia-backend-pcc4.onrender.com/registrar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ matricula })

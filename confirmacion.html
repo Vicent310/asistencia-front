@@ -24,15 +24,7 @@
         const foto = params.get('foto') || 'https://via.placeholder.com/100';
         const tipoRegistro = params.get('registro') || 'entrada';
         const hora = params.get('hora') || new Date().toLocaleTimeString();
-        if (!nombre || nombre === 'Nombre no disponible') {
-  const titulo = document.getElementById('titulo-confirmacion');
-  const registroEl = document.getElementById('registro');
-
-  titulo.textContent = '❌ Error al obtener la información';
-  titulo.style.color = 'red';
-  registroEl.textContent = 'Verifica que hayas escrito correctamente tu matrícula o consulta al administrador.';
-  registroEl.style.color = 'orange';
-}      
+      
         const titulo = document.getElementById('titulo-confirmacion');
         const registroEl = document.getElementById('registro');
       
@@ -42,7 +34,12 @@
         document.getElementById('foto').alt = `Foto de ${nombre}`;
         document.getElementById('hora').textContent = `Hora: ${hora}`;
       
-        if (tipoRegistro === 'entrada') {
+        if (!nombre || nombre === 'Nombre no disponible') {
+          titulo.textContent = '❌ Error al obtener la información';
+          titulo.style.color = 'red';
+          registroEl.textContent = 'Verifica que hayas escrito correctamente tu matrícula o consulta al administrador.';
+          registroEl.style.color = 'orange';
+        } else if (tipoRegistro === 'entrada') {
           titulo.textContent = '✅ Registro exitoso';
           registroEl.textContent = 'Entrada registrada correctamente';
           registroEl.classList.add('entrada');
@@ -51,14 +48,14 @@
           registroEl.textContent = 'Salida registrada correctamente';
           registroEl.classList.add('salida');
         } else if (tipoRegistro === 'ya_registrado') {
-          titulo.textContent = '❌ Ya registraste entrada y salida hoy o no se encontro tu matricula.';
+          titulo.textContent = '❌ Ya registraste entrada y salida hoy o no se encontró tu matrícula.';
           titulo.style.color = 'red';
           registroEl.textContent = 'Consulta con el administrador si necesitas hacer un cambio.';
           registroEl.style.color = 'orange';
         } else if (tipoRegistro === 'fallido') {
-          titulo.textContent = '❌ Ya registraste entrada y salida hoy o no se encontro tu matricula.';
+          titulo.textContent = '❌ Error al registrar asistencia';
           titulo.style.color = 'red';
-          registroEl.textContent = ' ❌ Consulta con el administrador si necesitas hacer un cambio.';
+          registroEl.textContent = '❌ Consulta con el administrador si necesitas hacer un cambio.';
           registroEl.style.color = 'red';
         }
       

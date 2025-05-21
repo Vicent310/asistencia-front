@@ -24,13 +24,22 @@
         const foto = params.get('foto') || 'https://via.placeholder.com/100';
         const tipoRegistro = params.get('registro') || 'entrada';
         const hora = params.get('hora') || new Date().toLocaleTimeString();
-      
+        if (!nombre || nombre === 'Nombre no disponible') {
+  const titulo = document.getElementById('titulo-confirmacion');
+  const registroEl = document.getElementById('registro');
+
+  titulo.textContent = '❌ Error al obtener la información';
+  titulo.style.color = 'red';
+  registroEl.textContent = 'Verifica que hayas escrito correctamente tu matrícula o consulta al administrador.';
+  registroEl.style.color = 'orange';
+}      
         const titulo = document.getElementById('titulo-confirmacion');
         const registroEl = document.getElementById('registro');
       
         document.getElementById('nombre').textContent = nombre;
         document.getElementById('tipo').textContent = `Tipo: ${tipo}`;
         document.getElementById('foto').src = foto;
+        document.getElementById('foto').alt = `Foto de ${nombre}`;
         document.getElementById('hora').textContent = `Hora: ${hora}`;
       
         if (tipoRegistro === 'entrada') {
